@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent-color: #3b82f6; /* Blue accent color */
 }
 
 @theme inline {
@@ -16,11 +17,46 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent-color: #60a5fa; /* Lighter blue for dark mode */
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
+/* Accent text color - replacing gradient */
+.accent-text {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Removing gradient animation */
+/* 
+.gradient-text {
+  background: linear-gradient(90deg, #007cf0, #00dfd8, #7928ca);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
