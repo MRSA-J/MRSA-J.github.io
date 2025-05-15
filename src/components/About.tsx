@@ -43,7 +43,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
-              I'm Chen Wei, a full-stack software engineer and machine learning enthusiast passionate about building scalable, user-centered applications that combine robust backend architecture with clean and responsive frontends.
+              I am Groot! Just kidding, I'm Chen Wei 哈哈哈哈哈. When I'm not pretending to be a Marvel character, I'm a full-stack software engineer and machine learning enthusiast building cool stuff with code.
             </p>
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
               Over the years, I've gained hands-on experience across the stack—from engineering scalable REST APIs and real-time WebSocket services to designing intuitive user experiences using React, React Native, and modern state management. I've worked on projects ranging from AI-driven recipe generation systems to hypertext-based dining planners, and even built LLM-powered interfaces with integrated cloud infrastructure.

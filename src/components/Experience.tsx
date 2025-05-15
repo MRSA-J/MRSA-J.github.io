@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiBriefcase, FiCalendar, FiExternalLink } from "react-icons/fi";
+import React from "react";
 
 const experienceData = [
   {
@@ -73,6 +74,27 @@ const experienceData = [
     skills: ["MySQL", "Database Design", "Alibaba Cloud", "Indexing", "Caching"]
   }
 ];
+
+// 辅助函数：将描述中的技术栈关键词加粗
+const boldTechStack = (text: string, skills: string[]) => {
+  let result = text;
+  
+  // 创建一个包含所有技能的数组，按长度降序排序（先替换长词，防止部分匹配）
+  const allSkills = [...skills, 
+    "React", "React Native", "FastAPI", "WebSockets", "WebSocket", "Supabase", "Resend API",
+    "Node.js", "Express.js", "PostgreSQL", "Twilio API", "LLM", "AWS", "DynamoDB",
+    "Git", "REST API", "RESTful", "SQL", "SecDB", "Slang", "MySQL", "Alibaba Cloud",
+    "ESLint", "Prettier", "API", "REST", "DAOs", "indexing", "caching"
+  ].sort((a, b) => b.length - a.length);
+  
+  // 为每个技能创建一个正则表达式，确保它是一个完整的词
+  allSkills.forEach(skill => {
+    const regex = new RegExp(`\\b${skill}\\b`, 'g');
+    result = result.replace(regex, `<strong>${skill}</strong>`);
+  });
+  
+  return result;
+};
 
 const Experience = () => {
   return (
@@ -152,7 +174,7 @@ const Experience = () => {
                   
                   <ul className="list-disc list-inside space-y-2 mb-4 text-zinc-600 dark:text-zinc-300">
                     {exp.description.map((item, i) => (
-                      <li key={i}>{item}</li>
+                      <li key={i} dangerouslySetInnerHTML={{ __html: boldTechStack(item, exp.skills) }}></li>
                     ))}
                   </ul>
                   
