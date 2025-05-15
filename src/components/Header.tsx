@@ -35,7 +35,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="font-bold text-xl">
-              <span className="gradient-text">Portfolio</span>
+              <span className="gradient-text">0xChen</span>
             </Link>
           </div>
           
