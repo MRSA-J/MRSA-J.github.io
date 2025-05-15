@@ -1,6 +1,6 @@
 "use client";
 
-import { FiGithub, FiLinkedin, FiMail, FiBookOpen } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiBookOpen, FiLayout } from "react-icons/fi";
 import Link from "next/link";
 
 const Footer = () => {
@@ -10,6 +10,7 @@ const Footer = () => {
     { icon: <FiGithub />, url: "https://github.com/chenwei-profile", label: "GitHub" },
     { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/chen-wei-57b225198/", label: "LinkedIn" },
     { icon: <FiBookOpen />, url: "https://mrsa-j.github.io/", label: "Blog" },
+    { icon: <FiLayout />, url: "https://happydoggie666.github.io/portfolio/", label: "Design Portfolio" },
     { icon: <FiMail />, url: "mailto:chen_wei@alumni.brown.edu", label: "Email" },
   ];
 
@@ -18,6 +19,7 @@ const Footer = () => {
     { href: "#experience", label: "Experience" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#hobby", label: "Hobby" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -79,6 +81,16 @@ const Footer = () => {
                   Blog
                 </a>
               </p>
+              <p className="mt-2">
+                <a 
+                  href="https://happydoggie666.github.io/portfolio/" 
+                  className="hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Design Portfolio
+                </a>
+              </p>
             </address>
           </div>
 
@@ -106,7 +118,7 @@ const Footer = () => {
             &copy; {currentYear} Chen Wei. All rights reserved.
           </p>
           <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500">
-            Built with Next.js, TypeScript, and Tailwind CSS
+            Built with Next.js, TypeScript, and Tailwind CSS  ✨🪐
           </p>
         </div>
       </div>

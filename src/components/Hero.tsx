@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiDownload, FiBookOpen } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiDownload, FiBookOpen, FiLayout } from "react-icons/fi";
 
 const Hero = () => {
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
         </h1>
         
         <h2 className="mt-4 text-xl sm:text-2xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300">
-          Full-Stack Software Engineer • Computer Scientist
+          Full-Stack Software Engineer • Machine Learning Engineer • Data Analyst
         </h2>
         
         <p className="mt-6 text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
@@ -66,6 +66,14 @@ const Hero = () => {
             className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
           >
             <FiBookOpen size={24} />
+          </a>
+          <a 
+            href="https://happydoggie666.github.io/portfolio/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+          >
+            <FiLayout size={24} />
           </a>
           <a 
             href="/resume.pdf" 

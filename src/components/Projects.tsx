@@ -67,6 +67,24 @@ const projectsData: ProjectsDataType = {
     description: "Web and mobile applications built with modern frameworks and technologies",
     projects: [
       {
+        title: "AMA Interview",
+        description: "An AI-powered interview preparation platform that helps users ace interviews with expert AI feedback. Features include 5000+ real interview questions, AI mock interviews, and personalized feedback.",
+        image: "/placeholder-project.jpg",
+        tags: ["React", "FastAPI", "WebSockets", "Supabase", "AI"],
+        githubUrl: "",
+        liveUrl: "https://www.amainterview.ai/",
+        id: "ama-interview"
+      },
+      {
+        title: "AMA Autopilot",
+        description: "An intelligent automation platform that streamlines workflow processes using AI technology. Features include task management, data synchronization, and integrations with popular productivity tools.",
+        image: "/placeholder-project.jpg",
+        tags: ["React", "Node.js", "WebSockets", "AI", "Automation"],
+        githubUrl: "",
+        liveUrl: "#",
+        id: "ama-autopilot"
+      },
+      {
         title: "E-Commerce Platform",
         description: "A full-stack e-commerce platform with user authentication, product management, cart functionality, payment processing, and order management. Built with React, Node.js, and MongoDB.",
         image: "/placeholder-project.jpg",
@@ -177,15 +195,17 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
         {/* Project Links */}
         <div className="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-700">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
-          >
-            <FiGithub className="mr-1" />
-            <span>GitHub</span>
-          </a>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+            >
+              <FiGithub className="mr-1" />
+              <span>GitHub</span>
+            </a>
+          )}
           <Link
             href={`/projects/${project.id}`}
             className="flex items-center text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"

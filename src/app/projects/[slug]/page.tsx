@@ -27,6 +27,55 @@ type Project = {
 
 // Example project data (you would normally fetch this from a database or API)
 const projectsData: Record<string, Project> = {
+  "ama-interview": {
+    id: "ama-interview",
+    title: "AMA Interview",
+    description: "An AI-powered interview preparation platform that helps users ace interviews with expert AI feedback.",
+    content: [
+      "Built a responsive customer support chat bot and contact page in React, integrating Resend API for real-time email delivery for the AMA Interview platform.",
+      "Implemented a scalable WebSocket system with a global React frontend provider to manage connections, auto-update message queues, and expose action APIs.",
+      "Created a seamless user experience that allows users to practice with 5000+ real interview questions from 100+ top companies.",
+      "Designed and developed features that help users save 90% on coaching costs while providing 98% accuracy in AI feedback.",
+      "Integrated with LinkedIn to allow users to start mock interviews directly from job posts and analyze interviewer preferences."
+    ],
+    category: "software-development",
+    tags: ["React", "FastAPI", "WebSockets", "Supabase", "AI", "Resend API"],
+    images: [
+      {
+        src: "/placeholder-project.jpg",
+        alt: "AMA Interview Platform",
+        width: 800,
+        height: 600
+      }
+    ],
+    liveUrl: "https://www.amainterview.ai/",
+    date: "2025-04-01",
+    featured: true
+  },
+  "ama-autopilot": {
+    id: "ama-autopilot",
+    title: "AMA Autopilot",
+    description: "An intelligent automation platform that streamlines workflow processes using AI.",
+    content: [
+      "Developed a cutting-edge automation platform that helps users streamline their workflow processes using AI technology.",
+      "Built a real-time task management system with priority queuing and intelligent scheduling capabilities.",
+      "Implemented data synchronization across multiple devices with offline capabilities and conflict resolution.",
+      "Created an intuitive dashboard that provides analytics and insights on productivity and task completion rates.",
+      "Designed an API integration system that connects with popular productivity tools and services."
+    ],
+    category: "software-development",
+    tags: ["React", "Node.js", "WebSockets", "AI", "Automation", "Analytics"],
+    images: [
+      {
+        src: "/placeholder-project.jpg",
+        alt: "AMA Autopilot Dashboard",
+        width: 800,
+        height: 600
+      }
+    ],
+    date: "2025-01-15",
+    featured: true
+  },
   "ai-recipe-generator": {
     id: "ai-recipe-generator",
     title: "AI Recipe Generator",

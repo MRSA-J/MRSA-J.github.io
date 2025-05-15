@@ -24,7 +24,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
-            className="relative h-80 w-full max-w-md mx-auto rounded-lg overflow-hidden shadow-lg"
+            className="relative h-96 w-full max-w-md mx-auto rounded-lg overflow-hidden shadow-lg"
           >
             <Image
               src="/Chen.png"
@@ -43,7 +43,7 @@ const About = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
-              I'm Chen Wei, a full-stack software engineer and computer scientist passionate about building scalable, user-centered applications that combine robust backend architecture with clean and responsive frontends.
+              I'm Chen Wei, a full-stack software engineer and machine learning enthusiast passionate about building scalable, user-centered applications that combine robust backend architecture with clean and responsive frontends.
             </p>
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-6">
               Over the years, I've gained hands-on experience across the stack—from engineering scalable REST APIs and real-time WebSocket services to designing intuitive user experiences using React, React Native, and modern state management. I've worked on projects ranging from AI-driven recipe generation systems to hypertext-based dining planners, and even built LLM-powered interfaces with integrated cloud infrastructure.
@@ -51,38 +51,6 @@ const About = () => {
             <p className="text-lg text-zinc-600 dark:text-zinc-300">
               I'm especially excited about intelligent systems, human-computer interaction, and scalable backend infrastructure. Whether it's fine-tuning a transformer model or optimizing SQL queries for speed, I enjoy solving challenging problems and turning ideas into polished products.
             </p>
-            
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              <div>
-                <h4 className="font-bold text-lg mb-2">Education</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">MSc in Computer Science, Brown University</p>
-                <p className="text-zinc-600 dark:text-zinc-300 mt-1">BSc in Computer Science & Applied Mathematics, Brandeis University (Magna Cum Laude)</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Experience</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">AMA Career</p>
-                <p className="text-zinc-600 dark:text-zinc-300 mt-1">Blyss, GreenPlatter</p>
-                <p className="text-zinc-600 dark:text-zinc-300 mt-1">Goldman Sachs (Intern)</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Languages</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">English, Chinese</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">GPA</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">4.0 GPA</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Teaching</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">TA for Computer Systems Security, Hands-on Data Science (Brown)</p>
-                <p className="text-zinc-600 dark:text-zinc-300 mt-1">TA for Operating Systems, Mobile App Development (Brandeis)</p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2">Research</h4>
-                <p className="text-zinc-600 dark:text-zinc-300">Computer Vision Research Group (Brandeis)</p>
-                <p className="text-zinc-600 dark:text-zinc-300 mt-1">Image and Sound Transformation</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
