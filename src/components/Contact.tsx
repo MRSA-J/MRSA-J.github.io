@@ -14,6 +14,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -25,24 +26,29 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitSuccess(false);
     setSubmitError(false);
+    setErrorMessage("");
 
-    // Simulate form submission
     try {
-      // In a real application, you would send the form data to your server
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
       
-      // Simulate network delay
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
       
       setSubmitSuccess(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitError(true);
+      setErrorMessage(error instanceof Error ? error.message : "An unexpected error occurred");
     } finally {
       setIsSubmitting(false);
     }
@@ -148,7 +154,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-900/30 rounded-lg text-red-700 dark:text-red-300 mb-6"
               >
-                <p>There was an error sending your message. Please try again later.</p>
+                <p>{errorMessage}</p>
               </motion.div>
             ) : null}
             
