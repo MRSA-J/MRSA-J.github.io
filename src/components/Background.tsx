@@ -67,7 +67,7 @@ const Background = () => {
                   <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-green-400 dark:bg-green-600"></div>
                   <h4 className="font-bold text-lg">Computer Vision Research Group</h4>
                   <p className="text-zinc-600 dark:text-zinc-300">Brandeis University</p>
-                  <p className="text-zinc-600 dark:text-zinc-300 mt-2">Image and Sound Transformation</p>
+                  <p className="text-zinc-600 dark:text-zinc-300 mt-2">Image and Sound Transformation with Semantics</p>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">2021 - 2022</p>
                 </div>
               </div>
@@ -100,8 +100,14 @@ const Background = () => {
                   <h4 className="font-bold text-lg">Brown University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300 text-sm">Sep. 2023 - May 2024</p>
                   <ul className="mt-2 space-y-1">
-                    <li className="text-zinc-600 dark:text-zinc-300">• CSCI 2660: Computer Systems Security</li>
-                    <li className="text-zinc-600 dark:text-zinc-300">• DATA 1030: Hands-on Data Science</li>
+                    <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
+                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
+                      • CSCI 2660: Computer Systems Security 
+                    </li>
+                    <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
+                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
+                      • DATA 1030: Hands-on Data Science 
+                    </li>
                   </ul>
                 </div>
                 <div className="relative">
@@ -109,8 +115,18 @@ const Background = () => {
                   <h4 className="font-bold text-lg">Brandeis University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300 text-sm">Sep. 2021 - May 2022</p>
                   <ul className="mt-2 space-y-1">
-                    <li className="text-zinc-600 dark:text-zinc-300">• COSI 131a: Operating Systems</li>
-                    <li className="text-zinc-600 dark:text-zinc-300">• COSI 153a: Mobile Application Development</li>
+                    <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
+                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
+                      • COSI 131a: Operating Systems 
+                    </li>
+                    <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
+                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
+                      • COSI 153a: Mobile Application Development 
+                    </li>
+                    <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
+                      <span className="mr-2 text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Grader</span>
+                      • MATH 10a: Calculus 
+                    </li>
                   </ul>
                 </div>
               </div>
