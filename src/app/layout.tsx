@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Professional Portfolio",
-  description: "Personal professional portfolio showcasing skills and projects",
+  title: "Chen Wei | Software Engineer & Computer Scientist",
+  description: "Professional portfolio of Chen Wei, a full-stack software engineer and computer scientist specializing in scalable applications and intelligent systems.",
 };
 
 export default function RootLayout({

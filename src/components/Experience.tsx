@@ -5,40 +5,63 @@ import { FiBriefcase, FiCalendar } from "react-icons/fi";
 
 const experienceData = [
   {
-    title: "Senior Software Engineer",
-    company: "Tech Company Inc.",
-    period: "2022 - Present",
+    title: "Full Stack Engineer",
+    company: "AMA Career",
+    period: "Apr. 2025 - Present",
     description: [
-      "Led development of a microservices architecture that improved system scalability by 40%",
-      "Implemented CI/CD pipelines that reduced deployment time by 60%",
-      "Mentored junior developers and conducted code reviews to ensure best practices",
-      "Designed and implemented RESTful APIs serving over 1M requests daily"
+      "Built a responsive customer support chat bot and contact page in React, integrating Resend API for real-time email delivery",
+      "Implemented a scalable WebSocket system with a global React frontend provider to manage connections, auto-update message queues, and expose action APIs",
+      "Developed a FastAPI backend manager to handle multi-client connect/disconnect/reconnect events with background listeners for long-running tasks",
+      "Streamlined data flow by implementing generic (de)serialization and integrating Supabase with automated mock data uploads for real-time storage and testing"
     ],
-    skills: ["React", "Node.js", "AWS", "Docker", "Kubernetes"]
+    skills: ["React", "FastAPI", "WebSockets", "Supabase", "Resend API"]
   },
   {
-    title: "Machine Learning Engineer",
-    company: "AI Solutions Ltd.",
-    period: "2020 - 2022",
+    title: "Full Stack Engineer",
+    company: "Blyss",
+    period: "Jan. 2025 - Apr. 2025",
     description: [
-      "Developed NLP models for sentiment analysis with 92% accuracy",
-      "Built and deployed recommendation systems that increased user engagement by 25%",
-      "Created data pipelines for processing and analyzing large datasets",
-      "Collaborated with product teams to integrate ML models into production applications"
+      "Redesigned a modular, multi-screen onboarding flow in React Native with integrated state management, mobile/email verification, and custom animations",
+      "Built and optimized backend services using Node.js and Express.js, implementing server-side routing, DAOs, and Twilio API-based authentication",
+      "Engineered a real-time chat messaging feature from scratch with Node.js/Express.js REST APIs and PostgreSQL, optimizing message storage with indexed queries"
     ],
-    skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "SQL"]
+    skills: ["React Native", "Node.js", "Express.js", "PostgreSQL", "Twilio API"]
   },
   {
-    title: "Data Analyst",
-    company: "Data Insights Co.",
-    period: "2018 - 2020",
+    title: "Full Stack Engineer",
+    company: "GreenPlatter",
+    period: "Jun. 2024 - Mar. 2025",
     description: [
-      "Analyzed customer behavior data to identify trends and opportunities",
-      "Created interactive dashboards using Tableau for executive reporting",
-      "Performed A/B testing to optimize user experience and conversion rates",
-      "Developed ETL processes for data integration from multiple sources"
+      "Designed and developed a full-stack LLM-based recipe creation and information management feature with custom frontend components",
+      "Migrated recipe data from AWS DynamoDB to PostgreSQL, enabling advanced querying capabilities such as filtering by allergens",
+      "Automated code quality enforcement by implementing Git pre-hooks to standardize formatting with ESLint and Prettier",
+      "Optimized backend workflows for RESTful API calls, ensuring efficient handling of data requests and adherence to modern API design standards"
     ],
-    skills: ["SQL", "Python", "Tableau", "Excel", "R"]
+    skills: ["LLM", "AWS DynamoDB", "PostgreSQL", "React", "REST API", "Git"]
+  },
+  {
+    title: "Summer Analyst Intern",
+    company: "Goldman Sachs",
+    period: "Jun. 2023 - Aug. 2023",
+    description: [
+      "Implemented quantitative models using Slang and assessed various types of risks for trading options leveraging SecDB and SQL analytics",
+      "Developed model to mitigate risk from daily transactional outflows and performed sensitivity analysis on firm's models",
+      "Validated and optimized stress assumptions made by firm's businesses based on different market conditions",
+      "Gained experience with financial modeling and risk management in a real-world trading environment"
+    ],
+    skills: ["SecDB", "SQL", "Slang", "Financial Modeling", "Risk Analysis"]
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "China Construction Industrial & Energy Engineering Group Co.",
+    period: "Jun. 2020 - Oct. 2020",
+    description: [
+      "Designed and implemented a MySQL database system deployed on Alibaba Cloud for managing construction sales data uploaded from WeaverOA",
+      "Optimized MySQL queries for read operations by implementing indexing and caching mechanisms for frequently accessed data",
+      "Introduced normalization and denormalization to improve query performance and minimize data redundancy",
+      "Served a large-scale organization with 2,000+ personnel through effective database management"
+    ],
+    skills: ["MySQL", "Database Design", "Alibaba Cloud", "Indexing", "Caching"]
   }
 ];
 

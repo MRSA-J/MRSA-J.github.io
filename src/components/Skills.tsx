@@ -9,21 +9,21 @@ const skillsData = [
     icon: <FiCode />,
     skills: [
       { name: "JavaScript/TypeScript", proficiency: 90 },
-      { name: "Python", proficiency: 85 },
-      { name: "Java", proficiency: 70 },
+      { name: "Python", proficiency: 95 },
+      { name: "Java", proficiency: 85 },
       { name: "SQL", proficiency: 80 },
-      { name: "C/C++", proficiency: 65 },
+      { name: "C/C++", proficiency: 75 },
     ]
   },
   {
-    category: "Data Science & ML",
+    category: "AI & ML",
     icon: <FiDatabase />,
     skills: [
-      { name: "TensorFlow/PyTorch", proficiency: 85 },
-      { name: "Scikit-learn", proficiency: 90 },
-      { name: "Pandas/NumPy", proficiency: 95 },
-      { name: "Data Visualization", proficiency: 80 },
-      { name: "Statistical Analysis", proficiency: 75 },
+      { name: "PyTorch/TensorFlow", proficiency: 85 },
+      { name: "NLP & Deep Learning", proficiency: 85 },
+      { name: "LLMs & RAG", proficiency: 90 },
+      { name: "Computer Vision", proficiency: 80 },
+      { name: "NumPy/Scikit-learn", proficiency: 90 },
     ]
   },
   {
@@ -31,43 +31,43 @@ const skillsData = [
     icon: <FiLayers />,
     skills: [
       { name: "React/Next.js", proficiency: 95 },
-      { name: "Node.js/Express", proficiency: 85 },
+      { name: "Node.js/Express", proficiency: 90 },
+      { name: "REST API/GraphQL", proficiency: 85 },
+      { name: "MongoDB/PostgreSQL", proficiency: 85 },
       { name: "HTML/CSS/Tailwind", proficiency: 90 },
-      { name: "RESTful APIs", proficiency: 85 },
-      { name: "GraphQL", proficiency: 75 },
     ]
   },
   {
     category: "DevOps & Cloud",
     icon: <FiCloud />,
     skills: [
-      { name: "AWS/Azure/GCP", proficiency: 80 },
-      { name: "Docker/Kubernetes", proficiency: 75 },
-      { name: "CI/CD Pipelines", proficiency: 85 },
-      { name: "Infrastructure as Code", proficiency: 70 },
-      { name: "Monitoring & Logging", proficiency: 75 },
+      { name: "AWS", proficiency: 80 },
+      { name: "Docker", proficiency: 85 },
+      { name: "Nginx", proficiency: 75 },
+      { name: "Redis/HBase", proficiency: 80 },
+      { name: "CI/CD Pipelines", proficiency: 75 },
     ]
   },
   {
-    category: "Tools & Frameworks",
+    category: "Frameworks & Tools",
     icon: <FiTool />,
     skills: [
       { name: "Git/GitHub", proficiency: 95 },
-      { name: "Jira/Confluence", proficiency: 85 },
-      { name: "MongoDB/PostgreSQL", proficiency: 80 },
-      { name: "Redux/Context API", proficiency: 90 },
-      { name: "Jest/React Testing Library", proficiency: 85 },
+      { name: "Spring/SpringBoot", proficiency: 80 },
+      { name: "WebSockets", proficiency: 90 },
+      { name: "FastAPI", proficiency: 85 },
+      { name: "React Native", proficiency: 85 },
     ]
   },
   {
     category: "Other Skills",
     icon: <FiTerminal />,
     skills: [
-      { name: "Agile/Scrum", proficiency: 90 },
-      { name: "Technical Writing", proficiency: 85 },
+      { name: "Shell/Linux", proficiency: 85 },
+      { name: "Technical Writing", proficiency: 80 },
+      { name: "Data Visualization", proficiency: 85 },
       { name: "Problem Solving", proficiency: 95 },
-      { name: "Team Leadership", proficiency: 80 },
-      { name: "Project Management", proficiency: 85 },
+      { name: "R/MATLAB", proficiency: 75 },
     ]
   }
 ];
@@ -81,7 +81,7 @@ const SkillBar = ({ name, proficiency }: { name: string; proficiency: number }) 
       </div>
       <div className="h-2 bg-zinc-200 dark:bg-zinc-700 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-blue-500"
+          className="h-full bg-blue-300 dark:bg-blue-400"
           initial={{ width: 0 }}
           whileInView={{ width: `${proficiency}%` }}
           transition={{ duration: 1, ease: "easeOut" }}

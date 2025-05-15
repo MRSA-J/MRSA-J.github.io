@@ -85,7 +85,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-medium">Location</h4>
                   <p className="text-zinc-600 dark:text-zinc-300">
-                    Your City, Country
+                    Providence, RI, US
                   </p>
                 </div>
               </div>
@@ -97,10 +97,10 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-medium">Email</h4>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:chen_wei@alumni.brown.edu"
                     className="text-zinc-600 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                   >
-                    your.email@example.com
+                    chen_wei@alumni.brown.edu
                   </a>
                 </div>
               </div>
@@ -110,12 +110,12 @@ const Contact = () => {
                   <FiPhone className="w-5 h-5 text-blue-500 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-medium">Phone</h4>
+                  <h4 className="text-lg font-medium">LinkedIn</h4>
                   <a
-                    href="tel:+1234567890"
+                    href="https://www.linkedin.com/in/chen-wei-57b225198/"
                     className="text-zinc-600 dark:text-zinc-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                   >
-                    +1 (234) 567-890
+                    Connect on LinkedIn
                   </a>
                 </div>
               </div>

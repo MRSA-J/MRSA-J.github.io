@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 // Define types for our project data structure
 type Project = {
@@ -13,6 +14,7 @@ type Project = {
   tags: string[];
   githubUrl: string;
   liveUrl: string;
+  id: string;
 };
 
 type CategoryData = {
@@ -37,7 +39,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["PyTorch", "AWS Lambda", "Computer Vision", "TensorFlow", "CNN"],
         githubUrl: "https://github.com/yourusername/ml-project1",
-        liveUrl: "https://ml-project1-demo.example.com"
+        liveUrl: "https://ml-project1-demo.example.com",
+        id: "ml-project1"
       },
       {
         title: "Natural Language Processing API",
@@ -45,7 +48,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["Python", "BERT", "Hugging Face", "FastAPI", "Docker"],
         githubUrl: "https://github.com/yourusername/ml-project2",
-        liveUrl: "https://ml-project2-demo.example.com"
+        liveUrl: "https://ml-project2-demo.example.com",
+        id: "ml-project2"
       },
       {
         title: "Time Series Forecasting Model",
@@ -53,7 +57,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["Python", "Keras", "LSTM", "Time Series", "Forecasting"],
         githubUrl: "https://github.com/yourusername/ml-project3",
-        liveUrl: "https://ml-project3-demo.example.com"
+        liveUrl: "https://ml-project3-demo.example.com",
+        id: "ml-project3"
       }
     ]
   },
@@ -67,7 +72,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["React", "Node.js", "MongoDB", "Redux", "Stripe API"],
         githubUrl: "https://github.com/yourusername/dev-project1",
-        liveUrl: "https://dev-project1-demo.example.com"
+        liveUrl: "https://dev-project1-demo.example.com",
+        id: "dev-project1"
       },
       {
         title: "Real-Time Collaboration Tool",
@@ -75,7 +81,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["TypeScript", "React", "Socket.io", "Express", "Redis"],
         githubUrl: "https://github.com/yourusername/dev-project2",
-        liveUrl: "https://dev-project2-demo.example.com"
+        liveUrl: "https://dev-project2-demo.example.com",
+        id: "dev-project2"
       },
       {
         title: "Mobile Fitness Application",
@@ -83,7 +90,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["React Native", "Firebase", "Redux", "GraphQL", "Expo"],
         githubUrl: "https://github.com/yourusername/dev-project3",
-        liveUrl: "https://dev-project3-demo.example.com"
+        liveUrl: "https://dev-project3-demo.example.com",
+        id: "dev-project3"
       }
     ]
   },
@@ -97,7 +105,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["Python", "Pandas", "Plotly", "SQL", "Flask"],
         githubUrl: "https://github.com/yourusername/data-project1",
-        liveUrl: "https://data-project1-demo.example.com"
+        liveUrl: "https://data-project1-demo.example.com",
+        id: "data-project1"
       },
       {
         title: "Customer Segmentation Analysis",
@@ -105,7 +114,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["R", "K-means", "Tableau", "Statistical Analysis", "Marketing"],
         githubUrl: "https://github.com/yourusername/data-project2",
-        liveUrl: "https://data-project2-demo.example.com"
+        liveUrl: "https://data-project2-demo.example.com",
+        id: "data-project2"
       },
       {
         title: "COVID-19 Data Visualization",
@@ -113,7 +123,8 @@ const projectsData: ProjectsDataType = {
         image: "/placeholder-project.jpg",
         tags: ["D3.js", "JavaScript", "Python", "Data Visualization", "API Integration"],
         githubUrl: "https://github.com/yourusername/data-project3",
-        liveUrl: "https://data-project3-demo.example.com"
+        liveUrl: "https://data-project3-demo.example.com",
+        id: "data-project3"
       }
     ]
   }
@@ -145,7 +156,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
       {/* Project Content */}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+        <Link href={`/projects/${project.id}`}>
+          <h3 className="text-xl font-bold mb-2 hover:text-blue-500 transition-colors">{project.title}</h3>
+        </Link>
         <p className="text-zinc-600 dark:text-zinc-300 mb-4 h-24 overflow-hidden">
           {project.description}
         </p>
@@ -173,15 +186,13 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             <FiGithub className="mr-1" />
             <span>GitHub</span>
           </a>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/projects/${project.id}`}
             className="flex items-center text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
           >
             <FiExternalLink className="mr-1" />
-            <span>Live Demo</span>
-          </a>
+            <span>View Details</span>
+          </Link>
         </div>
       </div>
     </motion.div>

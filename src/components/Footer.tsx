@@ -1,16 +1,16 @@
 "use client";
 
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiBookOpen } from "react-icons/fi";
 import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <FiGithub />, url: "https://github.com/yourusername", label: "GitHub" },
-    { icon: <FiLinkedin />, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: <FiTwitter />, url: "https://twitter.com/yourusername", label: "Twitter" },
-    { icon: <FiMail />, url: "mailto:your.email@example.com", label: "Email" },
+    { icon: <FiGithub />, url: "https://github.com/chenwei-profile", label: "GitHub" },
+    { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/chen-wei-57b225198/", label: "LinkedIn" },
+    { icon: <FiBookOpen />, url: "https://mrsa-j.github.io/", label: "Blog" },
+    { icon: <FiMail />, url: "mailto:chen_wei@alumni.brown.edu", label: "Email" },
   ];
 
   const quickLinks = [
@@ -26,10 +26,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-lg font-bold mb-4 accent-text">Portfolio</h3>
+            <h3 className="text-lg font-bold mb-4 accent-text">Chen Wei</h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
               A showcase of my work, skills, and professional journey as a 
-              Software Engineer / Machine Learning Engineer / Data Analyst.
+              Full-Stack Software Engineer and Computer Scientist.
             </p>
           </div>
 
@@ -52,21 +52,31 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <address className="not-italic text-zinc-600 dark:text-zinc-400">
-              <p>Your City, Country</p>
+              <p>Providence, RI, US</p>
               <p className="mt-2">
                 <a 
-                  href="mailto:your.email@example.com" 
+                  href="mailto:chen_wei@alumni.brown.edu" 
                   className="hover:text-zinc-900 dark:hover:text-white transition-colors"
                 >
-                  your.email@example.com
+                  chen_wei@alumni.brown.edu
                 </a>
               </p>
               <p className="mt-2">
                 <a 
-                  href="tel:+1234567890" 
+                  href="https://www.linkedin.com/in/chen-wei-57b225198/" 
                   className="hover:text-zinc-900 dark:hover:text-white transition-colors"
                 >
-                  +1 (234) 567-890
+                  LinkedIn Profile
+                </a>
+              </p>
+              <p className="mt-2">
+                <a 
+                  href="https://mrsa-j.github.io/" 
+                  className="hover:text-zinc-900 dark:hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Blog
                 </a>
               </p>
             </address>
@@ -93,7 +103,7 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 text-center">
           <p className="text-zinc-600 dark:text-zinc-400">
-            &copy; {currentYear} Your Name. All rights reserved.
+            &copy; {currentYear} Chen Wei. All rights reserved.
           </p>
           <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500">
             Built with Next.js, TypeScript, and Tailwind CSS

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiDownload, FiBookOpen } from "react-icons/fi";
 
 const Hero = () => {
   return (
@@ -14,16 +14,17 @@ const Hero = () => {
         className="text-center max-w-3xl"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-          Hi, I'm <span className="accent-text">Your Name</span>
+          Hi, I'm <span className="accent-text">Chen Wei</span>
         </h1>
         
         <h2 className="mt-4 text-xl sm:text-2xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300">
-          Software Engineer • Machine Learning Engineer • Data Analyst
+          Full-Stack Software Engineer • Computer Scientist
         </h2>
         
         <p className="mt-6 text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-          I build exceptional digital experiences with cutting-edge technology. Specializing in 
-          full-stack development, machine learning solutions, and data analytics.
+          I build scalable, user-centered applications that combine robust backend architecture with 
+          clean and responsive frontends. Specializing in intelligent systems, human-computer interaction, 
+          and scalable infrastructure.
         </p>
         
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -43,7 +44,7 @@ const Hero = () => {
         
         <div className="mt-8 flex items-center justify-center gap-6">
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/chenwei-profile" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
@@ -51,12 +52,20 @@ const Hero = () => {
             <FiGithub size={24} />
           </a>
           <a 
-            href="https://linkedin.com/in/yourusername" 
+            href="https://www.linkedin.com/in/chen-wei-57b225198/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
           >
             <FiLinkedin size={24} />
+          </a>
+          <a 
+            href="https://mrsa-j.github.io/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"
+          >
+            <FiBookOpen size={24} />
           </a>
           <a 
             href="/resume.pdf" 
