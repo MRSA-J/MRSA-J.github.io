@@ -32,9 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }} 
+          repository-name: MRSA-J/MRSA-J.github.io
+          branch: main
+          ssh-key: ${{ secrets.DEPLOY_KEY }} 

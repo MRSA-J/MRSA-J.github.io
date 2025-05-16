@@ -113,3 +113,38 @@ This project is open source and available under the [MIT License](LICENSE).
 
 - Inspired by modern portfolio designs
 - Thanks to the creators of Next.js, Tailwind CSS, and other libraries used in this project
+
+# Deploy SSH Key Setup Instructions
+
+To deploy your portfolio to GitHub Pages (MRSA-J.github.io) from this repository, follow these steps:
+
+## 1. Generate a new SSH key pair (no passphrase)
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f github-deploy-key -N ""
+```
+
+This creates two files:
+- `github-deploy-key` (private key)
+- `github-deploy-key.pub` (public key)
+
+## 2. Add the public key to your MRSA-J.github.io repository
+
+1. Go to your MRSA-J.github.io repository on GitHub
+2. Navigate to Settings > Deploy keys
+3. Click "Add deploy key"
+4. Title: "Portfolio Deployment"
+5. Key: (paste the contents of `github-deploy-key.pub`)
+6. Check "Allow write access"
+7. Click "Add key"
+
+## 3. Add the private key to your portfolio repository
+
+1. Go to your portfolio repository on GitHub
+2. Navigate to Settings > Secrets and variables > Actions
+3. Click "New repository secret"
+4. Name: `DEPLOY_KEY`
+5. Value: (paste the contents of the `github-deploy-key` file)
+6. Click "Add secret"
+
+The GitHub Actions workflow will now be able to deploy to your MRSA-J.github.io repository.
