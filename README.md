@@ -1,6 +1,6 @@
-# Professional Portfolio
+# Chen Wei's Portfolio
 
-A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Perfect for showcasing your work, skills, and experience as a Software Developer, Machine Learning Engineer, or Data Analyst.
+A modern, responsive personal portfolio website built with Next.js and TypeScript. Showcasing my work, skills, and experience as a Full Stack Engineer, Machine Learning Engineer, and Data Analyst.
 
 ## Features
 
@@ -8,20 +8,30 @@ A modern, responsive personal portfolio website built with Next.js, TypeScript, 
 - 📱 Fully responsive design
 - 🚀 Fast performance
 - ✨ Smooth animations using Framer Motion
-- 🎨 Clean and modern UI
-- 📊 Skills visualization
-- 📝 Contact form
+- 🎨 Clean and modern UI with custom CSS variables
+- 💼 Interactive project cards
+- 🧩 Academic background with visual timeline
+- 📊 Skills visualization with progress bars
+- 📝 Contact form with validation
 - 🔍 SEO optimized
 
 ## Sections
 
-- Hero section with intro and CTA
-- About section with personal information
-- Experience section to showcase work history
-- Skills section with proficiency levels
-- Projects section to display portfolio work
-- Contact section with form and contact info
-- Footer with social links and copyright
+- **Hero** section with introduction and call-to-action
+- **About** section with personal information and career objectives
+- **Experience** section showcasing professional work history
+- **Academic Background** with education, research, teaching, and achievements
+- **Projects** section organized by categories (Software Development, Machine Learning/Deep Learning, Data Analysis)
+- **Skills** section displaying technical proficiencies with visual indicators
+- **Contact** section with form and social links
+- **Footer** with additional links and copyright
+
+## Project Structure
+
+- `src/app` - Main application routes and pages
+- `src/components` - Reusable UI components
+- `src/styles` - Global styles and CSS variables
+- `public` - Static assets (images, icons, etc.)
 
 ## Getting Started
 
@@ -34,8 +44,8 @@ A modern, responsive personal portfolio website built with Next.js, TypeScript, 
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/professional-portfolio.git
-cd professional-portfolio
+git clone https://github.com/MRSA-J/chen-portfolio.git
+cd chen-portfolio
 ```
 
 2. Install dependencies
@@ -56,29 +66,44 @@ yarn dev
 
 ## Customization
 
-1. Update personal information in each component
-2. Replace placeholder images with your own
-3. Modify the color scheme in globals.css
-4. Update project details in the Projects component
-5. Add your own skills in the Skills component
-6. Update work history in the Experience component
+1. Update personal information in the component files
+2. Replace images in the `public` directory
+3. Modify the color scheme and theme variables in `src/styles/globals.css`
+4. Update project details in `src/components/Projects.tsx`
+5. Add your own skills in `src/components/Skills.tsx`
+6. Update work experience in `src/components/Experience.tsx`
+7. Edit academic information in `src/components/Background.tsx`
+
+## Key Technologies
+
+- **Next.js** - React framework for production-ready applications
+- **TypeScript** - Static type checking for better code quality
+- **CSS Variables** - Custom theming and styling without a CSS framework
+- **Framer Motion** - Advanced animations and transitions
+- **React Icons** - Comprehensive icon library
+- **Responsive Design** - Custom media queries for all device sizes
 
 ## Deployment
 
-The easiest way to deploy your portfolio is using the [Vercel Platform](https://vercel.com/), created by the makers of Next.js.
+This portfolio is optimized for deployment on Vercel:
 
 1. Push your code to a GitHub repository
-2. Import your project to Vercel
-3. Vercel will detect Next.js and set up the optimal build settings automatically
-4. Your site will be deployed!
+2. Import your project to [Vercel](https://vercel.com/)
+3. Vercel will automatically detect Next.js and configure the build settings
+4. Your portfolio will be deployed with a custom domain option
 
-## Built With
+## Performance
 
-- [Next.js](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [React Icons](https://react-icons.github.io/react-icons/) - Icons
+This portfolio is built with performance in mind:
+
+- Static page generation where possible
+- Optimized image loading and processing
+- Code splitting and lazy loading of components
+- Minimal dependencies to reduce bundle size
+
+## Contact
+
+Feel free to reach out through the contact form on the website or connect via the social links provided.
 
 ## License
 
