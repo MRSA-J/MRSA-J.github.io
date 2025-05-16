@@ -26,8 +26,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: out
-          branch: gh-pages 
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: MRSA-J/MRSA-J.github.io
+          publish_branch: main
+          publish_dir: ./out 
