@@ -32,9 +32,18 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: out
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }} 
+      # Copy Next.js output to docs directory for GitHub Pages
+      - name: Copy files to docs directory
+        run: |
+          mkdir -p docs
+          cp -r out/* docs/
+          cp public/.nojekyll docs/
+          git add docs
+
+      # Commit and push changes
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update docs directory for GitHub Pages" || echo "No changes to commit"
+          git push 
