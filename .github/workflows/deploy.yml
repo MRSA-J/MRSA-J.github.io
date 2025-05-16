@@ -36,6 +36,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
-          repository-name: MRSA-J/MRSA-J.github.io
-          branch: main
-          ssh-key: ${{ secrets.DEPLOY_KEY }} 
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }} 
