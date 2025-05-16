@@ -44,7 +44,7 @@ const Hero = () => {
         
         <div className="mt-8 flex items-center justify-center gap-6">
           <a 
-            href="https://github.com/chenwei-profile" 
+            href="https://github.com/MRSA-J" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white transition-colors"

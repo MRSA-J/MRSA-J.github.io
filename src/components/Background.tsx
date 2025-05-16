@@ -17,143 +17,135 @@ const Background = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="md:col-span-5">
+          <div className="space-y-10">
+            {/* Education Section */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mb-10"
             >
-              <div className="flex items-center mb-4">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center text-white text-xl">
-                  🎓
-                </div>
-                <h3 className="text-2xl font-bold ml-4 accent-text">Education</h3>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl text-blue-500 dark:text-blue-400 mr-3">🎓</div>
+                <h3 className="text-2xl font-bold accent-text">Education</h3>
               </div>
-              <div className="pl-14 border-l-2 border-blue-300 dark:border-blue-700 py-2">
-                <div className="relative mb-8">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-blue-400 dark:bg-blue-600"></div>
+              
+              <div className="p-6 border-l-4 border-blue-400 dark:border-blue-600">
+                <div className="mb-8">
                   <h4 className="font-bold text-lg">Brown University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300">M.S. in Computer Science</p>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">2022 - 2024</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">2022 - 2024</p>
                 </div>
-                <div className="relative">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-blue-400 dark:bg-blue-600"></div>
+                
+                <div>
                   <h4 className="font-bold text-lg">Brandeis University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300">B.S. in Computer Science & Applied Mathematics</p>
                   <p className="text-zinc-600 dark:text-zinc-300 text-sm italic">Magna Cum Laude</p>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">2019 - 2022</p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">2019 - 2022</p>
                 </div>
               </div>
             </motion.div>
 
+            {/* Achievements Section */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="flex items-center mb-4">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-green-400 to-teal-500 flex items-center justify-center text-white text-xl">
-                  🔬
-                </div>
-                <h3 className="text-2xl font-bold ml-4 accent-text">Research</h3>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl text-purple-500 dark:text-purple-400 mr-3">🌟</div>
+                <h3 className="text-2xl font-bold accent-text">Achievements</h3>
               </div>
-              <div className="pl-14 border-l-2 border-green-300 dark:border-green-700 py-2">
-                <div className="relative">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-green-400 dark:bg-green-600"></div>
-                  <h4 className="font-bold text-lg">Computer Vision Research Group</h4>
-                  <p className="text-zinc-600 dark:text-zinc-300">Brandeis University</p>
-                  <p className="text-zinc-600 dark:text-zinc-300 mt-2">Image and Sound Transformation with Semantics</p>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">2021 - 2022</p>
+              
+              <div className="p-6 border-l-4 border-purple-400 dark:border-purple-600">
+                <div className="mb-8">
+                  <h4 className="font-bold text-lg">Perfect Academic Record</h4>
+                  <ul className="mt-2 space-y-1">
+                    <li className="text-zinc-600 dark:text-zinc-300">Brown University: GPA 4.0/4.0</li>
+                    <li className="text-zinc-600 dark:text-zinc-300">Brandeis University: GPA 3.789/4.0</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-lg">Languages</h4>
+                  <p className="text-zinc-600 dark:text-zinc-300">English, Mandarin (Simplified Chinese)</p>
                 </div>
               </div>
             </motion.div>
-          </div>
-
-          {/* Center divider for visual separation */}
-          <div className="hidden md:block md:col-span-2">
-            <div className="h-full w-px bg-gradient-to-b from-transparent via-zinc-300 dark:via-zinc-700 to-transparent mx-auto"></div>
           </div>
 
           {/* Right Column */}
-          <div className="md:col-span-5">
+          <div className="space-y-10">
+            {/* Teaching Experience Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mb-10"
             >
-              <div className="flex items-center mb-4">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-center text-white text-xl">
-                  👨‍🏫
-                </div>
-                <h3 className="text-2xl font-bold ml-4 accent-text">Teaching Experience</h3>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl text-amber-500 dark:text-amber-400 mr-3">👨‍🏫</div>
+                <h3 className="text-2xl font-bold accent-text">Teaching Experience</h3>
               </div>
-              <div className="pl-14 border-l-2 border-amber-300 dark:border-amber-700 py-2">
-                <div className="relative mb-8">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-amber-400 dark:bg-amber-600"></div>
+              
+              <div className="p-6 border-l-4 border-amber-400 dark:border-amber-600">
+                <div className="mb-8">
                   <h4 className="font-bold text-lg">Brown University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300 text-sm">Sep. 2023 - May 2024</p>
-                  <ul className="mt-2 space-y-1">
+                  <ul className="mt-3 space-y-2">
                     <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
-                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
-                      • CSCI 2660: Computer Systems Security 
+                      <span className="mr-2 text-xs px-2 py-0.5 border border-amber-400 text-amber-600 dark:text-amber-400 rounded-full">TA</span>
+                      CSCI 2660: Computer Systems Security 
                     </li>
                     <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
-                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
-                      • DATA 1030: Hands-on Data Science 
+                      <span className="mr-2 text-xs px-2 py-0.5 border border-amber-400 text-amber-600 dark:text-amber-400 rounded-full">TA</span>
+                      DATA 1030: Hands-on Data Science 
                     </li>
                   </ul>
                 </div>
-                <div className="relative">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-amber-400 dark:bg-amber-600"></div>
+                
+                <div>
                   <h4 className="font-bold text-lg">Brandeis University</h4>
                   <p className="text-zinc-600 dark:text-zinc-300 text-sm">Sep. 2021 - May 2022</p>
-                  <ul className="mt-2 space-y-1">
+                  <ul className="mt-3 space-y-2">
                     <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
-                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
-                      • COSI 131a: Operating Systems 
+                      <span className="mr-2 text-xs px-2 py-0.5 border border-amber-400 text-amber-600 dark:text-amber-400 rounded-full">TA</span>
+                      COSI 131a: Operating Systems 
                     </li>
                     <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
-                      <span className="mr-2 text-xs px-2 py-0.5 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 rounded-full">TA</span>
-                      • COSI 153a: Mobile Application Development 
+                      <span className="mr-2 text-xs px-2 py-0.5 border border-amber-400 text-amber-600 dark:text-amber-400 rounded-full">TA</span>
+                      COSI 153a: Mobile Application Development 
                     </li>
                     <li className="text-zinc-600 dark:text-zinc-300 flex items-center">
-                      <span className="mr-2 text-xs px-2 py-0.5 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Grader</span>
-                      • MATH 10a: Calculus 
+                      <span className="mr-2 text-xs px-2 py-0.5 border border-blue-400 text-blue-600 dark:text-blue-400 rounded-full">Grader</span>
+                      MATH 10a: Calculus 
                     </li>
                   </ul>
                 </div>
               </div>
             </motion.div>
 
+            {/* Research Section */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="flex items-center mb-4">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center text-white text-xl">
-                  🌟
-                </div>
-                <h3 className="text-2xl font-bold ml-4 accent-text">Achievements</h3>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl text-green-500 dark:text-green-400 mr-3">🔬</div>
+                <h3 className="text-2xl font-bold accent-text">Research</h3>
               </div>
-              <div className="pl-14 border-l-2 border-purple-300 dark:border-purple-700 py-2">
-                <div className="relative mb-6">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-purple-400 dark:bg-purple-600"></div>
-                  <h4 className="font-bold text-lg">Perfect Academic Record</h4>
-                  <p className="text-zinc-600 dark:text-zinc-300">4.0 GPA</p>
-                </div>
-                <div className="relative">
-                  <div className="absolute -left-[26px] h-5 w-5 rounded-full bg-purple-400 dark:bg-purple-600"></div>
-                  <h4 className="font-bold text-lg">Languages</h4>
-                  <p className="text-zinc-600 dark:text-zinc-300">English, Mandarin (Simplified Chinese)</p>
+              
+              <div className="p-6 border-l-4 border-green-400 dark:border-green-600">
+                <div>
+                  <h4 className="font-bold text-lg">Computer Vision Research Group</h4>
+                  <p className="text-zinc-600 dark:text-zinc-300">Brandeis University</p>
+                  <p className="text-zinc-600 dark:text-zinc-300 mt-2">Image and Sound Transformation with Semantics</p>
+                  {/* <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">2021 - 2022</p> */}
                 </div>
               </div>
             </motion.div>

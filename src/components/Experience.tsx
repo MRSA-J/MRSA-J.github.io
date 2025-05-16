@@ -26,7 +26,7 @@ const experienceData = [
     title: "Full Stack Engineer",
     company: "Blyss",
     period: "Jan. 2025 - Apr. 2025",
-    url: "https://blyss.com",
+    url: "",
     description: [
       "Redesigned a modular, multi-screen onboarding flow in React Native with integrated state management, mobile/email verification, and custom animations",
       "Built and optimized backend services using Node.js and Express.js, implementing server-side routing, DAOs, and Twilio API-based authentication",
@@ -51,7 +51,7 @@ const experienceData = [
     title: "Summer Analyst Intern",
     company: "Goldman Sachs",
     period: "Jun. 2023 - Aug. 2023",
-    url: "https://goldmansachs.com",
+    url: "https://www.goldmansachs.com/",
     description: [
       "Implemented quantitative models using Slang and assessed various types of risks for trading options leveraging SecDB and SQL analytics",
       "Developed model to mitigate risk from daily transactional outflows and performed sensitivity analysis on firm's models",
@@ -64,7 +64,7 @@ const experienceData = [
     title: "Software Engineer Intern",
     company: "China Construction Industrial & Energy Engineering Group Co.",
     period: "Jun. 2020 - Oct. 2020",
-    url: "https://ccieeg.com",
+    url: "https://inco.cscec.com/en/",
     description: [
       "Designed and implemented a MySQL database system deployed on Alibaba Cloud for managing construction sales data uploaded from WeaverOA",
       "Optimized MySQL queries for read operations by implementing indexing and caching mechanisms for frequently accessed data",
@@ -121,14 +121,6 @@ const Experience = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="block bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-md hover:shadow-lg transition-all group relative"
             >
-              <a 
-                href={exp.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity"
-              >
-                <FiExternalLink className="text-blue-500 dark:text-blue-400" />
-              </a>
               
               <div className="flex flex-col md:flex-row md:items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
@@ -137,14 +129,20 @@ const Experience = () => {
                 
                 <div className="flex-grow">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <a 
-                      href={exp.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xl font-bold hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-                    >
-                      {exp.title}
-                    </a>
+                    {exp.url ? (
+                      <a 
+                        href={exp.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xl font-bold hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {exp.title}
+                      </a>
+                    ) : (
+                      <span className="text-xl font-bold">
+                        {exp.title}
+                      </span>
+                    )}
                     <div className="flex items-center text-zinc-500 dark:text-zinc-400 mt-1 sm:mt-0">
                       <FiCalendar className="w-4 h-4 mr-1" />
                       <span className="text-sm">{exp.period}</span>

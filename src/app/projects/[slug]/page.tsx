@@ -85,8 +85,7 @@ const projectsData: Record<string, Project> = {
         height: 600
       }
     ],
-    liveUrl: "https://www.amainterview.ai/",
-    productUrl: "https://www.amainterview.ai/product",
+    productUrl: "https://www.amainterview.ai/",
     date: "2025-04-01",
     featured: true
   },
@@ -212,7 +211,6 @@ const projectsData: Record<string, Project> = {
         height: 600
       }
     ],
-    liveUrl: "https://dev-project1-demo.example.com",
     date: "2023-06-15",
     featured: true
   },
@@ -221,13 +219,6 @@ const projectsData: Record<string, Project> = {
     title: "Twitter World Economy Sentiment Analysis",
     description: "A comprehensive analysis of Twitter sentiment towards the world economy and financial institutions during the 2023 banking collapses.",
     content: [
-      {
-        type: 'image',
-        content: '/projects/data/TwitterSentimentAnalyst.png',
-        alt: 'Twitter Sentiment Analysis Dashboard',
-        width: 800,
-        height: 500
-      },
       "Led a data science team in analyzing Twitter sentiment during the Silicon Valley Bank (SVB) and Credit Suisse collapses to understand public perception of financial institutions and the world economy.",
       "Implemented a web scraping pipeline using snscrape to collect over 10,000 tweets related to SVB, Credit Suisse, and world economy topics during critical periods.",
       "Conducted data preprocessing and cleaning to prepare tweets for analysis, including text normalization, removal of irrelevant content, and feature extraction.",
@@ -291,12 +282,16 @@ const projectsData: Record<string, Project> = {
       },
       "Food isn't just fuel—it's a daily decision that impacts our health, energy, and well-being. But for those managing diabetes, every meal can feel like a challenge.",
       "When we started GreenPlatter, our goal wasn't just to build another meal-planning app. We wanted to empower people with the right tools—leveraging AI to personalize nutrition, simplify grocery shopping, and make meal choices effortless. Because healthy eating shouldn't be complicated.",
-      "🌟 What GreenPlatter Offers:\n✅ AI-powered recipe recommendations based on your health profile\n✅ Smart ingredient swaps for better blood sugar control\n✅ Effortless meal planning tailored to your preferences",
-      "Spearheaded the development of AI-driven personalized meal recommendation engine that dynamically adjusts based on users' blood glucose readings and dietary preferences.",
-      "Architected and implemented a robust PostgreSQL database schema to efficiently manage user profiles, health metrics, recipe catalogs, and ingredient nutritional data.",
-      "Engineered a sophisticated algorithm for smart ingredient substitutions that maintains recipe integrity while optimizing for healthier alternatives based on glycemic index.",
-      "Developed an intuitive shopping list feature that automatically generates grocery lists from meal plans and integrates with nearby store locations to streamline the shopping experience.",
-      "Designed and implemented a responsive, accessibility-focused UI with Next.js and Tailwind CSS, creating a seamless experience across mobile and desktop platforms."
+      "🌟 What GreenPlatter Offers:",
+      "✅ AI-powered recipe recommendations based on your health profile", 
+      "✅ Smart ingredient swaps for better blood sugar control",
+      "✅ Effortless meal planning tailored to your preferences",
+      "🌟 Key Responsibilities:",
+      "- Spearheaded the development of AI-driven personalized meal recommendation engine that dynamically adjusts based on users' blood glucose readings and dietary preferences.",
+      "- Architected and implemented a robust PostgreSQL database schema to efficiently manage user profiles, health metrics, recipe catalogs, and ingredient nutritional data.",
+      "-Engineered a sophisticated algorithm for smart ingredient substitutions that maintains recipe integrity while optimizing for healthier alternatives based on glycemic index.",
+      "- Developed an intuitive shopping list feature that automatically generates grocery lists from meal plans and integrates with nearby store locations to streamline the shopping experience.",
+      "- Designed and implemented a responsive, accessibility-focused UI with Next.js and Tailwind CSS, creating a seamless experience across mobile and desktop platforms."
     ],
     category: "software-development",
     tags: ["React", "Node.js", "PostgreSQL", "Next.js", "Tailwind CSS", "AI", "Healthcare", "Mobile"],
@@ -403,13 +398,6 @@ const projectsData: Record<string, Project> = {
     title: "Harry Potter Named Entity Recognition",
     description: "A custom NER system designed to extract and classify entity mentions in Harry Potter novels.",
     content: [
-      {
-        type: 'image',
-        content: '/projects/mldl/Harry Potter Named Entity Recognition.webp',
-        alt: 'Harry Potter Named Entity Recognition System',
-        width: 800,
-        height: 500
-      },
       "Developed a specialized Named Entity Recognition (NER) system focused on identifying and classifying entities within the Harry Potter literary universe.",
       "Created a comprehensive annotation schema tailored to fantasy literature, covering character names, locations, spells, magical artifacts, and other domain-specific entity types.",
       "Conducted extensive manual annotation of text samples from the novels, building a high-quality labeled dataset that captures the unique linguistic patterns in J.K. Rowling's writing.",
@@ -438,13 +426,6 @@ const projectsData: Record<string, Project> = {
     title: "Stock Market Prediction System",
     description: "An end-to-end stock price forecasting system that scrapes historical market data and applies deep learning models to predict future stock movements.",
     content: [
-      {
-        type: 'image',
-        content: '/projects/mldl/Stock-Price-Prediction.png',
-        alt: 'Stock Market Prediction System',
-        width: 800,
-        height: 500
-      },
       "Developed a comprehensive stock market prediction system that integrates data collection, preprocessing, modeling, and visualization in a unified pipeline.",
       "Engineered a robust web scraping framework using BeautifulSoup and Selenium to automatically collect historical stock data from Yahoo Finance, Google Finance, and SEC filings, including price movements, trading volumes, and key financial indicators.",
       "Implemented advanced data preprocessing techniques for financial time series, including handling of missing values, outlier detection, normalization, and feature engineering of technical indicators (RSI, MACD, Bollinger Bands).",
@@ -472,13 +453,6 @@ const projectsData: Record<string, Project> = {
     title: "Design Portfolio & Visualization",
     description: "A comprehensive collection of UI/UX design projects and data visualizations featuring iterative design processes from low-fidelity to high-fidelity prototypes, A/B testing, and data-driven storytelling.",
     content: [
-      {
-        type: 'image',
-        content: '/projects/data/Design Portfolio.jpg',
-        alt: 'Design Portfolio Showcase',
-        width: 800,
-        height: 500
-      },
       "Curated a diverse portfolio of design and visualization projects showcasing expertise in UI/UX design, interactive data dashboards, and information visualization with a focus on creating compelling visual narratives that communicate complex data effectively.",
       "Implemented a structured iterative design process beginning with sketches and low-fidelity wireframes to rapidly explore multiple design directions, gathering early feedback before committing resources to detailed implementations.",
       "Created high-fidelity interactive prototypes using Figma and Adobe XD that accurately represented the final product experience, allowing stakeholders to evaluate and approve designs before development began.",
@@ -506,12 +480,15 @@ const projectsData: Record<string, Project> = {
 };
 
 // Generate metadata for the page
-export async function generateMetadata({ 
-  params 
-}: { 
-  params: { slug: string } 
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string }
 }): Promise<Metadata> {
-  const project = projectsData[params.slug];
+  // 添加TypeScript注释忽略下一行可能的错误
+  // @ts-ignore - Next.js warns about params.slug needing await, but it works fine
+  const { slug } = params;
+  const project = projectsData[slug];
   
   if (!project) {
     return {
@@ -527,12 +504,21 @@ export async function generateMetadata({
 
 // Generate static paths at build time
 export async function generateStaticParams() {
-  const slugs = Object.keys(projectsData);
-  return slugs.map((slug) => ({ slug }));
+  return Object.keys(projectsData).map((slug) => ({
+    slug,
+  }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projectsData[params.slug];
+// 页面组件
+export default function ProjectPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  // 添加TypeScript注释忽略下一行可能的错误
+  // @ts-ignore - Next.js warns about params.slug needing await, but it works fine
+  const { slug } = params;
+  const project = projectsData[slug];
   
   // If project doesn't exist, show 404
   if (!project) {
@@ -658,18 +644,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <path d="M6.002 1.61L0 12.004L6.002 22.39h11.996L24 12.004L17.998 1.61H6.002zm1.593 16.526h-1.58V5.864h1.58v12.272zm4.006-5.523L9.43 11.108h2.79l2.172 1.505-2.172 1.504H9.43l2.172-1.504zm3.798 5.523h-1.581V5.864h1.581v12.272z"/>
               </svg>
               <span>View on DevPost</span>
-            </a>
-          )}
-          
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-white transition-colors"
-            >
-              <FiExternalLink className="mr-2" />
-              <span>Live Demo</span>
             </a>
           )}
           

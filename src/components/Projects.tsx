@@ -50,8 +50,8 @@ const projectsData: ProjectsDataType = {
         image: "/projects/sde/AMA Interview.png",
         tags: ["React", "WebSockets", "Supabase", "AI"],
         githubUrl: "",
-        liveUrl: "https://www.amainterview.ai/",
-        productUrl: "https://www.amainterview.ai/product",
+        liveUrl: "",
+        productUrl: "https://www.amainterview.ai",
         id: "ama-interview"
       },
       {
@@ -60,7 +60,7 @@ const projectsData: ProjectsDataType = {
         image: "/projects/sde/E-commerce.png",
         tags: ["React", "Node.js", "MongoDB", "Redux", "Stripe API"],
         githubUrl: "",
-        liveUrl: "https://dev-project1-demo.example.com",
+        liveUrl: "",
         id: "dev-project1"
       },
       {
