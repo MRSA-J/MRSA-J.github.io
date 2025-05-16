@@ -7,6 +7,12 @@ on:
   # Allows manual workflow runs from GitHub UI
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -26,10 +32,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: MRSA-J/MRSA-J.github.io
-          publish_branch: main
-          publish_dir: ./out 
+          folder: out
+          branch: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }} 
