@@ -1,17 +1,3 @@
-# GitHub Pages 设置指南
-
-为了正确显示你的Next.js网站，请按照以下步骤设置GitHub Pages：
-
-1. 前往你的GitHub仓库
-2. 点击 "Settings" 标签页
-3. 在左侧菜单中找到并点击 "Pages"
-4. 在 "Build and deployment" 部分：
-   - 将 "Source" 设置为 "Deploy from a branch"
-   - 将 "Branch" 设置为 "main"
-   - 将目录设置为 "/docs"
-5. 点击 "Save" 按钮
-6. 稍等几分钟，你的网站应该会在 https://mrsa-j.github.io 上可用
-
 # Chen Wei's Portfolio
 
 A modern, responsive personal portfolio website built with Next.js and TypeScript. Showcasing my work, skills, and experience as a Full Stack Engineer, Machine Learning Engineer, and Data Analyst.
