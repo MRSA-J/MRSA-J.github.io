@@ -4,7 +4,6 @@ A modern, responsive personal portfolio website built with Next.js and TypeScrip
 
 ## Features
 
-- 🌙 Dark/Light mode support
 - 📱 Fully responsive design
 - 🚀 Fast performance
 - ✨ Smooth animations using Framer Motion
@@ -13,7 +12,6 @@ A modern, responsive personal portfolio website built with Next.js and TypeScrip
 - 🧩 Academic background with visual timeline
 - 📊 Skills visualization with progress bars
 - 📝 Contact form with validation
-- 🔍 SEO optimized
 
 ## Sections
 
